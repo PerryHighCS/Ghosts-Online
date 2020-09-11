@@ -29,7 +29,24 @@ public class Triangle
         color = Canvas.getColor("green");
         isVisible = false;
     }
-    
+
+    /**
+     * Create a new triangle with a specified position and color.
+     */
+    public Triangle(int x, int y, int width, int height, String color,
+                    boolean visible)
+    {
+        this.height = height;
+        this.width = width;
+        xPosition = x;
+        yPosition = y;
+        this.color = Canvas.getColor(color);
+                
+        if (visible) {
+            makeVisible();
+        }
+    }
+
     /**
      * Make this triangle visible. If it was already visible, do nothing.
      */

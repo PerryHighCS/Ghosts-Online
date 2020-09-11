@@ -25,7 +25,22 @@ public class Circle
         xPosition = 230;
         yPosition = 90;
         color = Canvas.getColor("blue");
-    }    
+    }
+
+    /**
+     * Create a new circle with a specified position and color.
+     */
+    public Circle(int x, int y, int diameter, String color, boolean visible)
+    {
+        this.diameter = diameter;
+        xPosition = x;
+        yPosition = y;
+        this.color = Canvas.getColor(color);
+        
+        if (visible) {
+            makeVisible();
+        }
+    }
     
     /**
      * Make this circle visible. If it was already visible, do nothing.

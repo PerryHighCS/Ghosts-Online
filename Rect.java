@@ -29,6 +29,22 @@ public class Rect
         color = Canvas.getColor("red");
         isVisible = false;
     }
+    
+    /**
+     * Create a new rectangle at a specified position and color.
+     */
+    public Rect(int x, int y, int width, int height, String color, boolean visible)
+    {
+        xSize = width;
+        ySize = height;
+        xPosition = x;
+        yPosition = y;
+        this.color = Canvas.getColor(color);
+                    
+        if (visible) {
+            makeVisible();
+        }
+    }
 
     /**
      * Make this rectangle visible. If it was already visible, do nothing.
