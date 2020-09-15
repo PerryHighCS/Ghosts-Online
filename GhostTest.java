@@ -9,7 +9,7 @@ public class GhostTest
 {
     public static void main(String[] args) {
         simpleTest();
-        //bigTest();
+        // bigTest();
     }
     
     public static void simpleTest() {
@@ -21,10 +21,10 @@ public class GhostTest
         pic.setTitle("One Ghost Test");
         pic.setBackgroundColor("black");
         
-        int height = 600;
+        int height = 500;
         int width = 400;
         int x = 200;
-        int y = 100;
+        int y = 50;
         Ghost ghost = new Ghost(x, y, width, height, "red", true);
         
         pic.redraw();
@@ -121,7 +121,6 @@ public class GhostTest
         // saveFile("ghostMutator1.png");
         // bigGhost.makeInvisible();
         // saveFile("ghostMutator2.png");
-
     }
 
     public static void saveFile(String filename) {
