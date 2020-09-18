@@ -1,6 +1,5 @@
 export DISPLAY=
+set -e
 javac *.java -d .
-if [ $? -eq 0 ]; then # if compilation succeeded
-    jar -cfm Ghost.jar .manifest.txt *.class *.ttf
-    java -jar Ghost.jar
-fi
+jar -cfe /tmp/Ghost.jar GhostTest *.class *.ttf
+java -jar /tmp/Ghost.jar
